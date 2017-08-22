@@ -117,6 +117,6 @@ export default class KeyboardSpacer extends Component {
 
   render() {
     return (
-      <View style={[styles.container, { height: this.state.keyboardSpace }, this.props.style]} />);
+      <View style={[styles.container, { height: Platform.OS === 'ios' ? this.state.keyboardSpace : 0 }, this.props.style]} />);
   }
 }
